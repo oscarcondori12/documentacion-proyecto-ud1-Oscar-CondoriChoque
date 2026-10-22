@@ -1,51 +1,49 @@
-### Gestor de incidencias
+# Gestor de Incidencias
 
-### Proposito del programa
 
-Ver todas las incidencias
+Nombre: Gestor de Incidencias
+
+Finalidad: Consultar las incidencias de soporte del centro desde la consola
+
+Descripción: Aplicación sencilla que permite ver las incidencias, filtrar las abiertas, buscar por texto y consultar una por su id. Los datos están metidos a mano en el codigo
+
+Versión de Java: Java 17 o superior
+
+Funcionalidades:
+- Ver todas las incidencias
 - Ver solo las que están abiertas
-- Buscar por texto (busca en el id y en el título, ignora mayúsculas)
-- Consultar una incidencia concreta por su identificador
-- Menú interactivo o ejecución por comandos
+- Buscar por id o por título (no distingue mayúsculas)
+- Consultar una incidencia concreta por su id
+- Se puede usar con menú o con comandos
 
-## Requisitos
+Estructura de archivos:
+es/centro/incidencias/
+- App.java
+- GestorIncidencias.java
+- Incidencia.java
+- IncidenciaNoEncontradaException.java
 
-Tener java 17 como minimo
+Compilación y ejecución:
 
-## Estructura del proyecto
-
-src/main/java/es.centro.incidencias
-├── App.java
-├── GestorIncidencias.java
-├── Incidencia.java
-└── IncidenciaNoEncontradaException.java
-
-## Compilación y ejecución
-
-### Compilar
-Desde la carpeta donde esté el paquete:
-
-`bash
+Para compilar:
 javac es/centro/incidencias/*.java
 
-### Menú interactivo
+Para ejecutar el menú:
+java es.centro.incidencias.App
+
+También se puede ejecutar pasando comandos (ayuda, listar, abiertas, buscar , detalle).
+
+Generación y consulta de Javadoc:
+
+Para generar la documentación:
+
+en tools del IDEA project, creas una carpeta de DOCS y ya te mete toda la informacion ahi
+
+Documentación:  
 
 
-Si lo lanzas sin argumentos pues sale el menu:
-
-
-
- `ayuda`     | Muestra la ayuda                              
- `listar`    | Muestra todas las incidencias                 
- `abiertas`  | Solo las que están abiertas                   
-`buscar`    | Busca por id o por título (ignora mayúsculas) 
- `detalle`   | Muestra una incidencia por su id   
-
-## Incidencias de ejemplo
-
-Hay 4 metidas a mano:
-
-- INC-001 → No se puede iniciar sesión (alta, abierta)
-- INC-002 → Actualizar el navegador (media, cerrada)
-- INC-003 → Impresora sin conexión (baja, abierta)
-- INC-004 → Fallo de red en el aula (alta, abierta)
+Clases principales:
+App - Punto de entrada, menú y comandos
+GestorIncidencias - Gestiona la lista de incidencias y las búsquedas
+Incidencia - Representa una incidencia
+IncidenciaNoEncontradaException - Se lanza cuando no existe el id que buscas
