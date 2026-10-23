@@ -39,7 +39,7 @@ Para generar la documentación:
 
 en tools del IDEA project, creas una carpeta de DOCS y ya te mete toda la informacion ahi
 
-Documentación:  
+Documentación publicada:  https://oscarcondori12.github.io/documentacion-proyecto-ud1-Oscar-CondoriChoque/proyecto-base-maven-gestor-incidencias/docs/
 
 
 Clases principales:
